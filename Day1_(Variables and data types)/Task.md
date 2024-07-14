@@ -28,7 +28,7 @@
 
 - **Task 6:** Try reassigning a variable declared with `const` and observe the error.
 
-
+---
 
 ### Feature Request:
 
@@ -37,7 +37,7 @@
 
 **2. Reassignment Demo:** Create a script that demonstrates the difference in behavior between `let` and `const` when reassigning values.
 
-
+---
 
 ### Achievement:
 
