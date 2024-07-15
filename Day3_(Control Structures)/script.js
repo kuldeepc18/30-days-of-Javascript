@@ -101,7 +101,7 @@ switch (true) {
 // Activity 4: Conditional (Ternary) Operator
 
 //Task 6:
-(24%2 == 0) ? console.log("Number is EVEN") : console.log("Number is ODD");
+(24 % 2 == 0) ? console.log("Number is EVEN") : console.log("Number is ODD");
 
 // Activity 5: Combining Conditions
 
