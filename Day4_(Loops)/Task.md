@@ -4,7 +4,6 @@
 
 ### Tasks/Activities:
 
----
 
 ### Activity 1: For Loop
 
