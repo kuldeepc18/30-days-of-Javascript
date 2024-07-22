@@ -1,0 +1,138 @@
+< !DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Event Handling Tasks</title>
+        <style>
+            #hoverElement {
+                width: 200px;
+                height: 200px;
+                background-color: lightgray;
+            }
+
+            .childElement {
+                margin-top: 10px;
+                padding: 10px;
+                background-color: lightgreen;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Event Handling Tasks</h1>
+
+        <!-- Task 1: Click event to change text -->
+        <button id="changeTextButton">Change Text</button>
+        <p id="textParagraph">Original Text</p>
+
+        <!-- Task 2: Double-click event to toggle image visibility -->
+        <img id="toggleImage" src="path/to/your/image.jpg" alt="Image to toggle" style="display: block;">
+
+        <!-- Task 3: Mouseover event to change background color -->
+        <!-- Task 4: Mouseout event to reset background color -->
+        <div id="hoverElement">Hover over me!</div>
+
+        <!-- Task 5: Keydown event to log key pressed -->
+        <input id="keyDownInput" type="text" placeholder="Type something...">
+
+        <!-- Task 6: Keyup event to display current value -->
+        <input id="keyUpInput" type="text" placeholder="Type something...">
+        <p id="inputValueParagraph">Current value: </p>
+
+        <!-- Task 7: Submit event to log form data -->
+        <form id="sampleForm">
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Task 8: Change event to display selected value -->
+        <select id="dropdown">
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+        </select>
+        <p id="selectedValueParagraph">Selected value: </p>
+
+        <!-- Task 9: Click event delegation for list items -->
+        <ul id="itemList">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <!-- Task 10: Event listener for dynamically added elements -->
+        <div id="parentElement"></div>
+        <button id="addChildButton">Add Child Element</button>
+
+        <script>
+            // Task 1
+            document.getElementById('changeTextButton').addEventListener('click', function () {
+                document.getElementById('textParagraph').textContent = 'Text has been changed!';
+            });
+
+            // Task 2
+            document.getElementById('toggleImage').addEventListener('dblclick', function () {
+                this.style.display = this.style.display === 'none' ? 'block' : 'none';
+            });
+
+            // Task 3
+            document.getElementById('hoverElement').addEventListener('mouseover', function () {
+                this.style.backgroundColor = 'lightblue';
+            });
+
+            // Task 4
+            document.getElementById('hoverElement').addEventListener('mouseout', function () {
+                this.style.backgroundColor = 'lightgray';
+            });
+
+            // Task 5
+            document.getElementById('keyDownInput').addEventListener('keydown', function (event) {
+                console.log(`Key pressed: ${event.key}`);
+            });
+
+            // Task 6
+            document.getElementById('keyUpInput').addEventListener('keyup', function () {
+                document.getElementById('inputValueParagraph').textContent = `Current value: ${this.value}`;
+            });
+
+            // Task 7
+            document.getElementById('sampleForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                const formData = new FormData(this);
+                formData.forEach((value, key) => {
+                    console.log(`${key}: ${value}`);
+                });
+            });
+
+            // Task 8
+            document.getElementById('dropdown').addEventListener('change', function () {
+                document.getElementById('selectedValueParagraph').textContent = `Selected value: ${this.value}`;
+            });
+
+            // Task 9
+            document.getElementById('itemList').addEventListener('click', function (e) {
+                if (e.target.tagName === 'LI') {
+                    console.log(`Clicked item: ${e.target.textContent}`);
+                }
+            });
+
+            // Task 10
+            document.getElementById('parentElement').addEventListener('click', function (event) {
+                if (event.target.classList.contains('childElement')) {
+                    console.log(`Clicked child element: ${event.target.textContent}`);
+                }
+            });
+
+            document.getElementById('addChildButton').addEventListener('click', function () {
+                const newChild = document.createElement('div');
+                newChild.className = 'childElement';
+                newChild.textContent = 'New Child Element';
+                document.getElementById('parentElement').appendChild(newChild);
+            });
+        </script>
+    </body>
+
+    </html>
