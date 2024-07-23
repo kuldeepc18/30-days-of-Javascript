@@ -1,5 +1,3 @@
-# Day 8
-
 # 30 days Javascript Challenge
 
 ## Day 8: ES6+ Features

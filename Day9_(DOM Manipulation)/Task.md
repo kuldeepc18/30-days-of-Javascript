@@ -1,5 +1,3 @@
-# Day 9
-
 # 30 days Javascript Challenge
 
 ## Day 9: DOM Manipulation

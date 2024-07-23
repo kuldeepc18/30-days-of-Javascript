@@ -1,5 +1,3 @@
-# Day 6
-
 # 30 days Javascript Challenge
 
 ## Day 6: Arrays

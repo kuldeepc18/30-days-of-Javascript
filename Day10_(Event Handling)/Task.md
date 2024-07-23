@@ -1,5 +1,3 @@
-# Day 10
-
 # 30 days Javascript Challenge
 
 ## Day 10: Event Handling
