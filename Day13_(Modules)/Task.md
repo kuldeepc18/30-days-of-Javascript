@@ -1,5 +1,3 @@
-# Day 13
-
 # 30 days Javascript Challenge
 
 ## Day 13: Modules
