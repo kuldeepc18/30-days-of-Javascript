@@ -1,5 +1,3 @@
-# Day 16
-
 # 30 days Javascript Challenge
 
 ## Day 16: Recursion

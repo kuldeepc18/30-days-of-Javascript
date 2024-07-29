@@ -1,5 +1,3 @@
-# Day 15
-
 # 30 days Javascript Challenge
 
 ## Day 15: Closures
