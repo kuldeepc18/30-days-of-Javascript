@@ -2,7 +2,7 @@
 const regex = /(\w+)@(\w+\.\w+)/;
 
 // Define an email address
-const email = 'bharat@gmail.com';
+const email = 'kuldeep@google.com';
 
 // Use the match() method to find the captures
 const captures = email.match(regex);
